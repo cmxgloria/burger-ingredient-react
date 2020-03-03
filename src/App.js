@@ -52,18 +52,15 @@ class App extends React.Component {
       <div className="App">
         <aside>
           <p>
-            tomato{" "}
             <button onClick={() => this.add("tomato")}>add tomato</button>
           </p>
           <p>
-            lettuce{" "}
             <button onClick={() => this.add("lettuce")}>add lettuce</button>
           </p>
           <p>
             kiwi <button onClick={() => this.add("kiwi")}>add kiwi</button>
           </p>
           <p>
-            cheese{" "}
             <button onClick={() => this.add("cheese")}>add cheese</button>
           </p>
         </aside>
