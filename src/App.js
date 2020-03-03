@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import cheesyInfo from "./cheesyInfo";
+import Burger from "./Burger";
 
 class App extends React.Component {
   // convert string array to div array component, use the map to return new array
@@ -58,21 +59,13 @@ class App extends React.Component {
             <button onClick={() => this.add("lettuce")}>add lettuce</button>
           </p>
           <p>
-            kiwi <button onClick={() => this.add("kiwi")}>add kiwi</button>
+            <button onClick={() => this.add("kiwi")}>add kiwi</button>
           </p>
           <p>
             <button onClick={() => this.add("cheese")}>add cheese</button>
           </p>
         </aside>
-        <div className="burger">
-          {ingredients.map((i, index) => (
-            // inside div has list of tag
-            // <div key={index} onClick={this.remove} className={i}>
-            <div key={index} onClick={() => this.remove(index)} className={i}>
-              {i}
-            </div>
-          ))}
-        </div>
+        <Burger ingredients={ingredients} onRemove={this.remove} />
         <p>{cheesyInfo(ingredients)}</p>
       </div>
     );
